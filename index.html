@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="ru" data-theme="dark">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>PocketAI — VIP</title>
+    <!-- VIP styles -->
+    <link rel="stylesheet" href="static/css/vip.css">
+</head>
+<body>
+
+<!-- ===== Header ===== -->
+<header class="app-header">
+    <button id="burgerBtn" class="icon-btn" aria-label="Menu">
+        <img src="static/img/burger.svg" alt="">
+    </button>
+
+    <div class="header-center">
+        <img id="logoImg" class="logo"
+             src="static/img/Logo.svg"
+             data-src-dark="static/img/Logo.svg"
+             data-src-light="static/img/Logo_black.svg"
+             alt="PocketAI">
+    </div>
+
+    <button id="rightIconBtn" class="icon-btn" aria-label="VIP">
+        <img src="static/img/Premium.svg" class="tier-img" alt="VIP">
+    </button>
+</header>
+
+<!-- ===== Sidebar ===== -->
+<aside id="sidebar" class="sidebar">
+    <div class="sidebar__head">
+        <div class="title" data-i18n="menu.title">Меню</div>
+        <button id="closeSidebar" class="icon-btn" aria-label="Close">✕</button>
+    </div>
+    <nav class="menu">
+        <button id="nav-stats" class="menu-item">
+            <img src="static/img/icons/stats.svg" alt="">
+            <span data-i18n="menu.stats">Ваша статистика</span>
+        </button>
+        <button id="nav-lang" class="menu-item">
+            <img src="static/img/icons/globe.svg" alt="">
+            <span data-i18n="menu.language">Выбор языка</span>
+        </button>
+        <button id="nav-theme" class="menu-item">
+            <img src="static/img/icons/theme.svg" alt="">
+            <span data-i18n="menu.theme">Тема</span>
+        </button>
+    </nav>
+</aside>
+
+<!-- ===== Page ===== -->
+<main class="page">
+
+    <!-- Поля выбора -->
+    <section id="controls" class="controls">
+        <!-- Инструмент -->
+        <div class="ui-field" id="field-instrument" role="button" tabindex="0"
+             aria-haspopup="dialog" aria-controls="instrumentsModal">
+            <label class="ui-field__label" data-i18n="label.select_instrument">Выберите инструмент</label>
+            <div class="ui-field__box">
+                <span class="ui-field__placeholder" data-i18n="ph.select_instrument">Выберите инструмент</span>
+            </div>
+        </div>
+
+        <!-- Модель (фиксированная: TESSA Quantum) -->
+        <div class="ui-field ui-field--locked" aria-disabled="true">
+            <label class="ui-field__label" data-i18n="label.select_model">Модель</label>
+            <div class="ui-field__box">
+                <span class="ui-field__placeholder">TESSA Quantum</span>
+                <span class="badge">VIP</span>
+            </div>
+        </div>
+
+        <!-- Время сделки -->
+        <div class="ui-field" id="field-expiration" role="button" tabindex="0"
+             aria-haspopup="dialog" aria-controls="expireModal">
+            <label class="ui-field__label" data-i18n="label.expiration_time">Время экспирации</label>
+            <div class="ui-field__box">
+                <span class="ui-field__placeholder" data-i18n="ph.expiration_time">Выберите время сделки</span>
+            </div>
+        </div>
+
+        <!-- Старт -->
+        <button id="vipStartBtn" class="primary-btn" data-i18n="btn.generate">Сгенерировать сигнал</button>
+    </section>
+
+    <!-- Карточка сигнала VIP -->
+    <section id="vipSignal" class="vip-card" aria-live="polite">
+        <div class="vip-card__head">
+            <div class="ttl">
+                <img src="static/img/icons/signal.svg" alt="">
+                <span data-i18n="signal.title">Сигнал</span>
+            </div>
+            <div class="model signal-model">Модель: TESSA Quantum</div>
+        </div>
+
+        <!-- До старта анализа -->
+        <div id="idleView" class="idle">
+            <div class="idle__text" data-i18n="vip.idle">Нажмите «Сгенерировать сигнал»</div>
+        </div>
+
+        <!-- Шаги анализа -->
+        <div id="analysisSteps" class="steps" hidden>
+            <div class="step" data-step="1">
+                <div class="step__icon"></div>
+                <div class="step__content">
+                    <div class="step__title" data-i18n="vip.ta">Технический анализ</div>
+                    <div class="step__sub"   data-i18n="vip.ta_sub">Индикаторы и уровни S/R</div>
+                </div>
+                <div class="step__state"></div>
+            </div>
+
+            <div class="step" data-step="2">
+                <div class="step__icon"></div>
+                <div class="step__content">
+                    <div class="step__title" data-i18n="vip.patterns">Распознавание паттернов</div>
+                    <div class="step__sub"   data-i18n="vip.patterns_sub">Тренды и фигуры</div>
+                </div>
+                <div class="step__state"></div>
+            </div>
+
+            <div class="step" data-step="3">
+                <div class="step__icon"></div>
+                <div class="step__content">
+                    <div class="step__title" data-i18n="vip.math">Математические расчёты</div>
+                    <div class="step__sub"   data-i18n="vip.math_sub">Вероятности и риски</div>
+                </div>
+                <div class="step__state"></div>
+            </div>
+
+            <div class="step" data-step="4">
+                <div class="step__icon"></div>
+                <div class="step__content">
+                    <div class="step__title" data-i18n="vip.generation">Генерация сигнала</div>
+                    <div class="step__sub"   data-i18n="vip.generation_sub">Финальная сборка</div>
+                </div>
+                <div class="step__state"></div>
+            </div>
+
+            <div class="progress"><div id="progressBar" class="progress__bar"></div></div>
+            <div id="progressText" class="progress__text">0%</div>
+        </div>
+
+        <!-- Результат -->
+        <div id="resultView" class="result" hidden>
+            <div class="dir-wrap">
+                <div id="dirArrow" class="dir-arrow up"></div>
+                <div id="dirText" class="dir-text up">UP</div>
+            </div>
+
+            <!-- 2 колонки × 3 блока -->
+            <div class="info-grid info-2x3">
+                <!-- слева -->
+                <div class="info">
+                    <div class="key" data-i18n="vip.market">Рынок:</div>
+                    <div class="val">OTC</div>
+                </div>
+                <!-- справа -->
+                <div class="info">
+                    <div class="key" data-i18n="vip.confidence">Уверенность:</div>
+                    <div id="resConf" class="val">—%</div>
+                </div>
+
+                <!-- слева -->
+                <div class="info">
+                    <div class="key" data-i18n="vip.time">Время:</div>
+                    <div id="resTime" class="val">—</div>
+                </div>
+                <!-- справа -->
+                <div class="info">
+                    <div class="key" data-i18n="vip.strength">Сила:</div>
+                    <div id="resStrength" class="val">Medium</div>
+                </div>
+
+                <!-- слева -->
+                <div class="info">
+                    <div class="key" data-i18n="vip.pair">Пара:</div>
+                    <div id="resPair" class="val">—</div>
+                </div>
+                <!-- справа -->
+                <div class="info">
+                    <div class="key" data-i18n="vip.valid_until">Действует до:</div>
+                    <div id="resValid" class="val">—:—</div>
+                </div>
+            </div>
+
+            <!-- одна строка на два блока -->
+            <div class="info-grid row-2col">
+                <div class="info badge-block">
+                    <div id="resAcc" class="big">—%</div>
+                    <div class="sub" data-i18n="vip.accuracy">точность</div>
+                </div>
+                <div class="info badge-block">
+                    <div id="resVol" class="big">Low</div>
+                    <div class="sub" data-i18n="vip.volume">объём</div>
+                </div>
+            </div>
+
+            <!-- полный ряд -->
+            <div class="info risk-full">
+                <div class="key" data-i18n="vip.risk">Риск</div>
+                <div id="resRisk" class="val">Medium</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Сброс -->
+    <div id="resetWrap" class="reset-wrap" hidden>
+        <button id="resetBtn" class="reset-btn" data-i18n="btn.reset">Сбросить</button>
+    </div>
+</main>
+
+<!-- ===== Modals ===== -->
+
+<!-- Instruments modal -->
+<div class="modal" id="instrumentsModal" aria-hidden="true" role="dialog" aria-labelledby="instrTitle">
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__dialog modal__dialog--instr">
+        <h3 class="modal__title" id="instrTitle" data-i18n="instr.title">Выберите инструмент</h3>
+
+        <!-- Поиск СВЕРХУ -->
+        <div class="instr__search">
+            <div class="search">
+                <img src="static/img/icons/search.svg" alt="">
+                <input id="instrSearch" type="text" placeholder="Поиск...">
+            </div>
+        </div>
+
+        <div class="instr__layout">
+            <aside class="instr__cats">
+                <div class="cats-title" data-i18n="instr.categories">КАТЕГОРИИ</div>
+                <button class="instr-cat is-active" data-cat="currencies" type="button" data-i18n="instr.currencies">Валюты</button>
+                <button class="instr-cat" data-cat="crypto"      type="button" data-i18n="instr.crypto">Криптовалюты</button>
+                <button class="instr-cat" data-cat="stocks"      type="button" data-i18n="instr.stocks">Акции</button>
+                <button class="instr-cat" data-cat="commodities" type="button" data-i18n="instr.commodities">Сырьё</button>
+                <button class="instr-cat" data-cat="indices"     type="button" data-i18n="instr.indices">Индексы</button>
+            </aside>
+
+            <div class="instr__list">
+                <div id="instrList" class="items"></div>
+            </div>
+        </div>
+
+        <button class="modal__close" data-close-modal data-i18n="btn.close">Закрыть</button>
+    </div>
+</div>
+
+<!-- Expiration modal -->
+<div class="modal" id="expireModal" aria-hidden="true" role="dialog" aria-labelledby="expTitle">
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__dialog modal__dialog--exp">
+        <h3 class="modal__title" id="expTitle" data-i18n="expire.title">Время экспирации</h3>
+        <div id="expList" class="exp-list"></div>
+        <button class="modal__close" data-close-modal data-i18n="btn.close">Закрыть</button>
+    </div>
+</div>
+
+<!-- Theme modal -->
+<div class="modal" id="themeModal" aria-hidden="true" role="dialog" aria-labelledby="themeTitle">
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__dialog modal__dialog--theme">
+        <h3 class="modal__title" id="themeTitle" data-i18n="theme.title">Тема</h3>
+        <div class="theme-list">
+            <button class="option-item" data-theme="dark"><img src="static/img/icons/moon.svg" alt=""><span data-i18n="theme.dark">Тёмная</span></button>
+            <button class="option-item" data-theme="default"><img src="static/img/icons/auto.svg" alt=""><span data-i18n="theme.default">По умолчанию</span></button>
+            <button class="option-item" data-theme="light"><img src="static/img/icons/sun.svg" alt=""><span data-i18n="theme.light">Светлая</span></button>
+        </div>
+        <button class="modal__close" data-close-modal data-i18n="btn.close">Закрыть</button>
+    </div>
+</div>
+
+<!-- Language modal -->
+<div class="modal" id="langModal" aria-hidden="true" role="dialog" aria-labelledby="langTitle">
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__dialog modal__dialog--lang">
+        <h3 class="modal__title" id="langTitle">Choose Language</h3>
+        <div class="lang-grid">
+            <button class="lang-opt" data-lang="ru"><img src="static/img/lang/ru.svg" class="lang-flag" alt=""><span>Русский</span></button>
+            <button class="lang-opt" data-lang="en"><img src="static/img/lang/en.svg" class="lang-flag" alt=""><span>English</span></button>
+        </div>
+        <button class="modal__close" data-close-modal data-i18n="btn.close">Close</button>
+    </div>
+</div>
+
+<!-- Stats modal -->
+<div class="modal" id="statsModal" aria-hidden="true" role="dialog" aria-labelledby="statsTitle">
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__dialog modal__dialog--stats">
+        <h3 class="modal__title" id="statsTitle" data-i18n="stats.title">Ваша статистика</h3>
+        <div class="stats-rows">
+            <div class="stats-row"><div class="key" data-i18n="stats.tariff">Ваш тариф:</div><div class="val" id="stTariff">VIP</div></div>
+            <div class="stats-row"><div class="key" data-i18n="stats.received">Сигналов получено:</div><div class="val" id="stCount">0</div></div>
+            <div class="stats-row"><div class="key" data-i18n="stats.accuracy">Средняя точность:</div><div class="val" id="stAvg">0%</div></div>
+        </div>
+        <button class="modal__close" data-close-modal data-i18n="btn.close">Закрыть</button>
+    </div>
+</div>
+
+<!-- VIP Welcome sheet (first open only) -->
+<div class="sheet" id="vipWelcome" aria-hidden="true">
+    <div class="sheet__backdrop" data-sheet-close></div>
+    <div class="sheet__body" role="dialog" aria-modal="true" aria-labelledby="vipWelcomeTitle">
+        <div class="sheet__drag"></div>
+        <img src="static/img/Premium.svg" class="sheet__icon" alt="">
+        <h3 class="sheet__title" id="vipWelcomeTitle" data-i18n="welcome.title">
+            Добро пожаловать, VIP!
+        </h3>
+        <p class="sheet__text" data-i18n="welcome.text">
+            Вы теперь VIP-клиент. Спасибо, что с нами! Получайте более точные сигналы,
+            торгуйте аккуратно и используйте преимущества вашего статуса.
+        </p>
+        <button class="sheet__btn" id="vipWelcomeBtn" data-i18n="welcome.cta">Начать</button>
+    </div>
+</div>
+
+<!-- VIP logic -->
+<script src="static/js/vip.js"></script>
+</body>
+</html>
