@@ -12,8 +12,8 @@ const I18N = {
         "vip.patterns":"Patterns recognition","vip.patterns_sub":"Trends & figures",
         "vip.math":"Mathematical calculations","vip.math_sub":"Probabilities & risks",
         "vip.generation":"Signal generation","vip.generation_sub":"Final assembling",
-        "welcome.title": "Welcome, VIP!",
-        "welcome.text": "You are now a VIP client. Thanks for being with us! Enjoy higher accuracy, trade wisely and use your status benefits.",
+        "welcome.title": "Welcome, Platinum!",
+        "welcome.text": "You are now a Platinum client. Thanks for being with us! Enjoy higher accuracy, trade wisely and use your status benefits.",
         "welcome.cta": "Continue",
         "vip.market":"Market:","vip.time":"Time:","vip.pair":"Pair:","vip.confidence":"Confidence:","vip.strength":"Strength:","vip.valid_until":"Valid until:","vip.accuracy":"accuracy","vip.volume":"volume","vip.risk":"risk",
         "stats.title":"Your Statistics","stats.tariff":"Your tariff:","stats.received":"Signals received:","stats.accuracy":"Signal accuracy:"
@@ -30,8 +30,8 @@ const I18N = {
         "vip.patterns":"Распознавание паттернов","vip.patterns_sub":"Тренды и фигуры",
         "vip.math":"Математические расчёты","vip.math_sub":"Вероятности и риски",
         "vip.generation":"Генерация сигнала","vip.generation_sub":"Финальная сборка",
-        "welcome.title": "Добро пожаловать, VIP!",
-        "welcome.text": "Вы теперь VIP-клиент. Спасибо, что с нами! Получайте более точные сигналы, торгуйте аккуратно и используйте преимущества вашего статуса.",
+        "welcome.title": "Добро пожаловать, Platinum!",
+        "welcome.text": "Вы теперь Platinum-клиент. Спасибо, что с нами! Получайте более точные сигналы, торгуйте аккуратно и используйте преимущества вашего статуса.",
         "welcome.cta": "Продолжить",
         "vip.market":"Рынок:","vip.time":"Время:","vip.pair":"Пара:","vip.confidence":"Уверенность:","vip.strength":"Сила:","vip.valid_until":"Действует до:","vip.accuracy":"точность","vip.volume":"объём","vip.risk":"риск",
         "stats.title":"Ваша статистика","stats.tariff":"Ваш тариф:","stats.received":"Сигналов получено:","stats.accuracy":"Средняя точность:"
@@ -196,7 +196,7 @@ function addSignalToStats(acc){
 }
 function openStatsModal(){
     const s=loadStats(); const count=s.count||0; const avg=count?(s.sumAcc/count):0;
-    document.getElementById('stTariff').textContent='VIP';
+    document.getElementById('stTariff').textContent='Platinum';
     document.getElementById('stCount').textContent=count;
     document.getElementById('stAvg').textContent=`${Math.round(avg)}%`;
     openModal('statsModal');

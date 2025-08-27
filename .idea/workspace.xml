@@ -5,26 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6373e3cc-c59c-4552-afe2-269b87558cb4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/static/css/vip.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/Logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/Logo_black.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/Premium.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/arrow.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/base.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/burger.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/icons/auto.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/icons/globe.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/icons/moon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/icons/search.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/icons/signal.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/icons/stats.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/icons/sun.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/icons/theme.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/lang/en.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/lang/ru.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/loader.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/vip.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vip.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,30 +15,30 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="31j5bDsIOAq9uNvmDE0fBUUXszM" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JavaScript Debug.vip.html.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/keren/OneDrive/Desktop/vip-miniapp/static/img",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JavaScript Debug.vip.html.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/keren/OneDrive/Desktop/vip-miniapp/static/img&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\keren\OneDrive\Desktop\vip-miniapp\static\img" />
@@ -91,7 +72,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1756024711089</updated>
-      <workItem from="1756024712181" duration="4695000" />
+      <workItem from="1756024712181" duration="5538000" />
+      <workItem from="1756304393722" duration="1395000" />
     </task>
     <servers />
   </component>
