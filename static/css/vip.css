@@ -138,7 +138,7 @@ button{font:inherit; color:inherit}
     content:""; position:absolute; inset:18% 28% 18% 28%; background:currentColor;
     clip-path:polygon(50% 0,0 60%,28% 60%,28% 100%,72% 100%,72% 60%,100% 60%)
 }
-.dir-arrow.up{color:var(--success)} .dir-arrow.down{color:var(--danger)}
+.dir-arrow.up{color:var(--success)} .dir-arrow.down{color:var(--danger); transform: rotate(180deg)}
 .dir-text{font-size:34px; font-weight:900; letter-spacing:2px; text-transform:uppercase}
 .dir-text.up{color:var(--success)} .dir-text.down{color:var(--danger)}
 
