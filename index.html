@@ -93,7 +93,7 @@
                 <img src="static/img/icons/signal.svg" alt="">
                 <span data-i18n="signal.title">Сигнал</span>
             </div>
-            <div class="model signal-model">Модель: TESSA Quantum</div>
+            <div class="model signal-model" data-i18n="modal.q">Модель: TESSA Quantum</div>
         </div>
 
         <!-- До старта анализа -->
@@ -207,8 +207,12 @@
     </section>
 
     <!-- Сброс -->
-    <div id="resetWrap" class="reset-wrap" hidden>
-        <button id="resetBtn" class="reset-btn" data-i18n="btn.reset">Сбросить</button>
+    <!-- стало -->
+    <div id="actionWrap" class="reset-wrap" hidden>
+        <div class="actions">
+            <button id="repeatBtn" class="repeat-btn" data-i18n="btn.repeat">Повторить</button>
+            <button id="resetBtn" class="reset-btn" data-i18n="btn.reset">Сбросить</button>
+        </div>
     </div>
 </main>
 
@@ -279,6 +283,8 @@
         <div class="lang-grid">
             <button class="lang-opt" data-lang="ru"><img src="static/img/lang/ru.svg" class="lang-flag" alt=""><span>Русский</span></button>
             <button class="lang-opt" data-lang="en"><img src="static/img/lang/en.svg" class="lang-flag" alt=""><span>English</span></button>
+            <button class="lang-opt" data-lang="es" aria-pressed="false"> <img src="static/img/lang/es.svg" alt="" class="lang-flag"><span>Español</span></button>
+            <button class="lang-opt" data-lang="hi" aria-pressed="false"><img src="static/img/lang/hi.svg" alt="" class="lang-flag"><span>हिन्दी</span></button>
         </div>
         <button class="modal__close" data-close-modal data-i18n="btn.close">Close</button>
     </div>

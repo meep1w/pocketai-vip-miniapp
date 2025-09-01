@@ -359,3 +359,16 @@ button{font:inherit; color:inherit}
     max-height: 64vh;
     min-height: 44vh;
 }
+
+/* блок действий под карточкой */
+.reset-wrap .actions{display:flex; gap:10px; justify-content:center}
+
+/* повторить = маленькая «первичная» */
+.repeat-btn{
+    padding:10px 14px; border-radius:12px; color:#fff; font-weight:800;
+    background:linear-gradient(180deg,var(--primary),var(--primary-2));
+    border:1px solid var(--primary-2)
+}
+
+/* сброс = как было */
+.reset-btn{padding:10px 14px; border-radius:12px; background:transparent; border:1px dashed var(--stroke); color:var(--text)}
