@@ -372,3 +372,47 @@ button{font:inherit; color:inherit}
 
 /* сброс = как было */
 .reset-btn{padding:10px 14px; border-radius:12px; background:transparent; border:1px dashed var(--stroke); color:var(--text)}
+
+/* === Themed icons: ч/б иконки станут белыми в тёмной теме и чёрными в светлой === */
+:root { --icon-filter: invert(0); }                 /* светлая → без фильтра (чёрные) */
+:root[data-theme="dark"] { --icon-filter: invert(1) brightness(1.2); } /* тёмная → белые */
+
+img.icon-auto-filter {
+    filter: var(--icon-filter);
+    transition: filter .2s ease;
+}
+
+/* Если используешь inline <svg class="icon-svg"> — перекрашиваем через currentColor */
+.icon-svg { color: var(--text-color, #fff); fill: currentColor; }
+
+/* Для многоцветных (флаги и т.п.) НЕ ставь icon-auto-filter, чтобы цвета не инвертировались */
+
+/* Белые исходники (png/svg) → в светлой теме становятся чёрными */
+html[data-theme="light"] img.icon-src-white { filter: invert(1) brightness(.0) contrast(1.1); }
+html[data-theme="dark"]  img.icon-src-white { filter: none; }
+
+/* Единый размер для кнопок в хедере и сайдбаре */
+.icon-btn img{ width:20px; height:20px; display:block }
+.menu-item img{ width:18px; height:18px; display:block }
+
+/* (опц.) слегка приглушим иконки в сайдбаре, но оставим читаемыми */
+.menu-item img{ opacity:.9 }
+
+/* базовая геометрия всех кнопок иконок в хедере */
+.app-header .icon-btn{
+    width:36px; height:36px;            /* hitbox остаётся прежним */
+    display:grid; place-items:center;
+    border-radius:10px;
+    --icon-size: 18px;                   /* базовый размер пиктограмм */
+}
+
+/* картинка/иконка внутри */
+.app-header .icon-btn > img,
+.app-header .icon-btn > svg{
+    width:var(--icon-size);
+    height:var(--icon-size);
+    object-fit:contain;
+}
+
+/* ТОЛЬКО правая иконка — больше */
+#rightIconBtn{ --icon-size: 30px; }

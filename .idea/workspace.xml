@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6373e3cc-c59c-4552-afe2-269b87558cb4" name="Changes" comment="">
+    <list default="true" id="6373e3cc-c59c-4552-afe2-269b87558cb4" name="Changes" comment="реди">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/vip.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/vip.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,11 +27,12 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
     &quot;JavaScript Debug.vip.html.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/keren/OneDrive/Desktop/vip-miniapp/static/img&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/keren/OneDrive/Desktop/vip-miniapp/static/img/lang&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -41,6 +43,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\keren\OneDrive\Desktop\vip-miniapp\static\img\lang" />
       <recent name="C:\Users\keren\OneDrive\Desktop\vip-miniapp\static\img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -74,10 +77,54 @@
       <updated>1756024711089</updated>
       <workItem from="1756024712181" duration="5538000" />
       <workItem from="1756304393722" duration="1395000" />
+      <workItem from="1756307006905" duration="731000" />
+      <workItem from="1756668995859" duration="341000" />
+      <workItem from="1756718130554" duration="4121000" />
+      <workItem from="1756738627125" duration="2158000" />
     </task>
+    <task id="LOCAL-00001" summary="реди">
+      <option name="closed" value="true" />
+      <created>1756307249797</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1756307249797</updated>
+    </task>
+    <task id="LOCAL-00002" summary="реди">
+      <option name="closed" value="true" />
+      <created>1756669328607</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1756669328607</updated>
+    </task>
+    <task id="LOCAL-00003" summary="реди">
+      <option name="closed" value="true" />
+      <created>1756722694113</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1756722694113</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="реди" />
+    <option name="LAST_COMMIT_MESSAGE" value="реди" />
   </component>
 </project>
