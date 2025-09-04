@@ -416,3 +416,113 @@ html[data-theme="dark"]  img.icon-src-white { filter: none; }
 
 /* ТОЛЬКО правая иконка — больше */
 #rightIconBtn{ --icon-size: 30px; }
+
+/* === ШАГИ: состояния + иконки ===================================== */
+.step {
+    position: relative;
+    transition: border-color .25s, background-color .25s, filter .25s;
+}
+.step.is-active{
+    border-color: color-mix(in oklab, var(--success) 45%, var(--stroke));
+    background: color-mix(in oklab, var(--success) 10%, transparent);
+    filter: saturate(1.05);
+}
+.step.is-next{
+    border-color: color-mix(in oklab, var(--primary) 50%, var(--stroke));
+    background: color-mix(in oklab, var(--primary) 8%, transparent);
+}
+.step.is-future{
+    opacity: .9;
+}
+.step.is-done{
+    border-color: color-mix(in oklab, var(--success) 55%, var(--stroke));
+    background: color-mix(in oklab, var(--success) 16%, transparent);
+}
+
+/* Квадратик состояния справа — используем как маску под иконку */
+.step__state{
+    position: relative;
+    isolation: isolate;
+    width:22px; height:22px; border-radius:6px;
+    border:1px solid var(--stroke);
+    background: rgba(255,255,255,.03);
+    overflow: hidden;
+}
+/* сама иконка через mask: подставляется из JS в --ic-url */
+.step__state::before{
+    content:"";
+    position:absolute; inset:3px;
+    background: currentColor;
+    -webkit-mask: var(--ic-url) center/contain no-repeat;
+    mask: var(--ic-url) center/contain no-repeat;
+    opacity:.95; transition: transform .18s ease, opacity .18s ease;
+}
+.step.is-active .step__state{ color: var(--success); border-color: color-mix(in oklab, var(--success) 45%, var(--stroke)); }
+.step.is-next   .step__state{ color: var(--primary); border-color: color-mix(in oklab, var(--primary) 45%, var(--stroke)); }
+.step.is-future .step__state{ color: color-mix(in oklab, var(--muted) 82%, #888); }
+.step.is-done   .step__state{
+    color: #fff;
+    background: var(--success);
+    border-color: transparent;
+}
+.step.is-done .step__state::before{ opacity:1; transform: scale(1.02); }
+
+/* Прогресс-бар — плавная заливка + подпись */
+.progress__bar{
+    height:100%; width:0;
+    background:
+            linear-gradient(90deg,#2ea7d1,#21c37a),
+            repeating-linear-gradient(45deg,rgba(255,255,255,.18) 0 8px,transparent 8px 16px);
+    transition: width .08s linear;
+}
+.progress__text{
+    text-align:center; color:var(--muted); font-size:var(--fz-sm); margin-top:6px;
+    min-height: 1.2em; /* чтобы подпись не прыгала */
+}
+
+/* === СТРЕЛКА результата: свечение + пульс ========================= */
+@keyframes pulseRing {
+    0%   { opacity:.35; transform: translate(-50%,-50%) scale(1); }
+    70%  { opacity:.05; transform: translate(-50%,-50%) scale(1.35); }
+    100% { opacity:0;   transform: translate(-50%,-50%) scale(1.55); }
+}
+.dir-wrap{ display:grid; place-items:center; margin:8px 0 2px; }
+.dir-arrow{
+    --ring: currentColor;
+    position:relative;
+    width:98px; height:98px; border-radius:999px;
+    border:2px solid currentColor;
+    box-shadow:
+            0 0 0 6px color-mix(in oklab, currentColor 18%, transparent),
+            0 6px 18px color-mix(in oklab, currentColor 28%, transparent);
+    background:
+            radial-gradient(60% 60% at 50% 40%, color-mix(in oklab,currentColor 15%, transparent), transparent 60%),
+            transparent;
+}
+/* пульсирующее кольцо */
+.dir-arrow::before{
+    content:"";
+    position:absolute; left:50%; top:50%;
+    width:110%; height:110%; border-radius:999px;
+    background: radial-gradient(closest-side, var(--ring), transparent 70%);
+    transform: translate(-50%,-50%);
+    animation: pulseRing 1.6s ease-out infinite;
+    pointer-events:none; mix-blend-mode: screen;
+    opacity:.25;
+}
+/* сам треугольник */
+.dir-arrow::after{
+    content:"";
+    position:absolute; inset:18% 26%;
+    background: currentColor;
+    clip-path: polygon(50% 0, 0 60%, 28% 60%, 28% 100%, 72% 100%, 72% 60%, 100% 60%);
+}
+.dir-arrow.up   { color: var(--success); }
+.dir-arrow.down { color: var(--danger); transform: rotate(180deg); }
+
+.dir-text{
+    font-size:34px; font-weight:900; letter-spacing:2px; text-transform:uppercase;
+    text-shadow: 0 0 18px color-mix(in oklab,currentColor 35%, transparent);
+}
+.dir-text.up{ color: var(--success); }
+.dir-text.down{ color: var(--danger); }

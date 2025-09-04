@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6373e3cc-c59c-4552-afe2-269b87558cb4" name="Changes" comment="реди">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/vip.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/vip.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +31,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/keren/OneDrive/Desktop/vip-miniapp/static/img/lang&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/keren/OneDrive/Desktop/vip-miniapp/static/img&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -43,8 +42,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\keren\OneDrive\Desktop\vip-miniapp\static\img\lang" />
       <recent name="C:\Users\keren\OneDrive\Desktop\vip-miniapp\static\img" />
+      <recent name="C:\Users\keren\OneDrive\Desktop\vip-miniapp\static\img\lang" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\keren\OneDrive\Desktop\vip-miniapp\static\img" />
@@ -81,6 +80,8 @@
       <workItem from="1756668995859" duration="341000" />
       <workItem from="1756718130554" duration="4121000" />
       <workItem from="1756738627125" duration="2158000" />
+      <workItem from="1756836637056" duration="2099000" />
+      <workItem from="1756845260944" duration="604000" />
     </task>
     <task id="LOCAL-00001" summary="реди">
       <option name="closed" value="true" />
@@ -106,7 +107,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756722694113</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="реди">
+      <option name="closed" value="true" />
+      <created>1756838050056</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1756838050056</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
